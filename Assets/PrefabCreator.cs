@@ -1,59 +1,75 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
+[RequireComponent(typeof(ARTrackedImageManager))]
 public class PrefabCreator : MonoBehaviour
 {
-    [SerializeField] private GameObject cPrefab;
-    [SerializeField] private GameObject bPrefab;
+    [SerializeField] private GameObject[] placeablePrefabs;
+    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
     [SerializeField] private Vector3 prefabOffset;
 
     private ARTrackedImageManager aRTrackedImageManager;
-    private GameObject c;
-    private GameObject b;
 
-    private void OnEnable()
+
+    private void Awake()
     {
         aRTrackedImageManager = GetComponent<ARTrackedImageManager>();
+
+        foreach (GameObject prefab in placeablePrefabs)
+        {
+            GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+            newPrefab.name = prefab.name;
+            spawnedPrefabs.Add(prefab.name, newPrefab);
+        }
+
+
+    }
+    private void OnEnable()
+    {
         aRTrackedImageManager.trackablesChanged.AddListener(onChanged);
+    }
+    private void OnDisable()
+    {
+        aRTrackedImageManager?.trackablesChanged.RemoveListener(onChanged);
     }
 
     private void onChanged(ARTrackablesChangedEventArgs<ARTrackedImage> args)
     {
-        foreach (var newImage in args.added)
+        foreach (ARTrackedImage newImage in args.added)
         {
-            if (newImage.referenceImage.name == "BeeImage")
-            {
-                b = Instantiate(bPrefab, newImage.transform);
-                b.transform.position += prefabOffset;
-            }
-
-            else if (newImage.referenceImage.name == "CloudImage")
-            {
-                c = Instantiate(cPrefab, newImage.transform);
-                c.transform.position += prefabOffset;
-            }
+            UpdateImage(newImage);
+            
         }
 
-        foreach (var updatedImage in args.updated)
+        foreach (ARTrackedImage updatedImage in args.updated)
         {
-            // Handle updated event
+            UpdateImage(updatedImage);
         }
 
         foreach (var removedImage in args.removed)
         {
-            if (removedImage.Value.referenceImage.name == "BeeImage" && b != null)
+            Console.WriteLine(removedImage);
+            spawnedPrefabs[removedImage.Value.name].SetActive(false);
+        }
+    }
+    private void UpdateImage(ARTrackedImage newImage)
+    {
+        string name = newImage.referenceImage.name;
+        Vector3 position = newImage.transform.position;
+
+        GameObject prefab = spawnedPrefabs[name];
+        prefab.transform.position = position;
+        prefab.SetActive(true);
+
+        foreach(GameObject gameObject in spawnedPrefabs.Values)
+        {
+            if(gameObject.name != name)
             {
-                Destroy(b);  // Destroy the bee when its tracked image is removed
-                b = null;
-                bPrefab.SetActive(false);
-            }
-            else if (removedImage.Value.referenceImage.name == "CloudImage" && c != null)
-            {
-                Destroy(c);  // Destroy the cloud when its tracked image is removed  // Destroy the bee when its tracked image is removed
-                c = null;
-                cPrefab.SetActive(false);
+                gameObject.SetActive(false);
             }
         }
     }

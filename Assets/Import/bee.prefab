@@ -3649,7 +3649,7 @@ GameObject:
   - component: {fileID: 6131172492207727988}
   - component: {fileID: 6269344632332272902}
   m_Layer: 0
-  m_Name: Imported
+  m_Name: bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
