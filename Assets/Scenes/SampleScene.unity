@@ -1853,7 +1853,7 @@ MonoBehaviour:
   placeablePrefabs:
   - {fileID: 8632271843058396236, guid: a6fbd692aa3f9cb41adf6a206e5962b6, type: 3}
   - {fileID: 1722053318189859721, guid: a8c777e14b5fc664a84c0ded5b195591, type: 3}
-  - {fileID: 919132149155446097, guid: 5f0fc494164204154b5d2a06e8d57390, type: 3}
+  - {fileID: 6735166555960755155, guid: f463aa17bcc7d0e4389fdf8bdb18831c, type: 3}
   prefabOffset: {x: 0, y: 0.05, z: 0}
 --- !u!114 &642176355
 MonoBehaviour:
