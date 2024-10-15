@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
@@ -14,7 +12,6 @@ public class PrefabCreator : MonoBehaviour
 
     private ARTrackedImageManager aRTrackedImageManager;
 
-
     private void Awake()
     {
         aRTrackedImageManager = GetComponent<ARTrackedImageManager>();
@@ -23,26 +20,29 @@ public class PrefabCreator : MonoBehaviour
         {
             GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
             newPrefab.name = prefab.name;
+            newPrefab.SetActive(false); // Set prefabs inactive initially
             spawnedPrefabs.Add(prefab.name, newPrefab);
         }
-
-
     }
+
+    [Obsolete]
     private void OnEnable()
     {
-        aRTrackedImageManager.trackablesChanged.AddListener(onChanged);
-    }
-    private void OnDisable()
-    {
-        aRTrackedImageManager?.trackablesChanged.RemoveListener(onChanged);
+        aRTrackedImageManager.trackedImagesChanged += onChanged;
     }
 
-    private void onChanged(ARTrackablesChangedEventArgs<ARTrackedImage> args)
+    [Obsolete]
+    private void OnDisable()
+    {
+        aRTrackedImageManager.trackedImagesChanged -= onChanged;
+    }
+
+    [Obsolete]
+    private void onChanged(ARTrackedImagesChangedEventArgs args)
     {
         foreach (ARTrackedImage newImage in args.added)
         {
             UpdateImage(newImage);
-            
         }
 
         foreach (ARTrackedImage updatedImage in args.updated)
@@ -52,24 +52,26 @@ public class PrefabCreator : MonoBehaviour
 
         foreach (var removedImage in args.removed)
         {
-            Console.WriteLine(removedImage);
-            spawnedPrefabs[removedImage.Value.name].SetActive(false);
+            spawnedPrefabs[removedImage.referenceImage.name].SetActive(false);
         }
     }
+
     private void UpdateImage(ARTrackedImage newImage)
     {
         string name = newImage.referenceImage.name;
         Vector3 position = newImage.transform.position;
 
-        GameObject prefab = spawnedPrefabs[name];
-        prefab.transform.position = position;
-        prefab.SetActive(true);
-
-        foreach(GameObject gameObject in spawnedPrefabs.Values)
+        if (spawnedPrefabs.TryGetValue(name, out GameObject prefab))
         {
-            if(gameObject.name != name)
+            prefab.transform.position = position;
+            prefab.SetActive(true);
+
+            foreach (GameObject go in spawnedPrefabs.Values)
             {
-                gameObject.SetActive(false);
+                if (go != prefab)
+                {
+                    go.SetActive(false);
+                }
             }
         }
     }
