@@ -11,6 +11,7 @@ public class PrefabCreator : MonoBehaviour
     [SerializeField] private Vector3 prefabOffset;
 
     private ARTrackedImageManager aRTrackedImageManager;
+    private GameObject activePrefab;
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ public class PrefabCreator : MonoBehaviour
         {
             GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
             newPrefab.name = prefab.name;
-            newPrefab.SetActive(false); // Set prefabs inactive initially
+            newPrefab.SetActive(false);
             spawnedPrefabs.Add(prefab.name, newPrefab);
         }
     }
@@ -63,9 +64,33 @@ public class PrefabCreator : MonoBehaviour
 
         if (spawnedPrefabs.TryGetValue(name, out GameObject prefab))
         {
-            prefab.transform.position = position;
-            prefab.SetActive(true);
+            // Only apply this logic to the bee prefab
+            if (prefab.name == "bee")
+            {
+                // Only set the position if the bee is not yet active
+                if (!prefab.activeInHierarchy)
+                {
+                    prefab.transform.position = position; // Set initial position
+                    prefab.SetActive(true); // Activate the bee
+                    activePrefab = prefab; // Store reference to active prefab
+                }
 
+                // Ensure the bee is controlled by Rigidbody and isn't affected by AR tracking anymore
+                Rigidbody beeRigidbody = prefab.GetComponent<Rigidbody>();
+                if (beeRigidbody != null)
+                {
+                    beeRigidbody.isKinematic = false; // Allow physics to control the bee
+                }
+            }
+            else
+            {
+                // For all other prefabs, continue to update position as normal
+                prefab.transform.position = position;
+                prefab.SetActive(true);
+                activePrefab = prefab;
+            }
+
+            // Deactivate all other prefabs except the current one
             foreach (GameObject go in spawnedPrefabs.Values)
             {
                 if (go != prefab)
