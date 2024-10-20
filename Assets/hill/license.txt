@@ -1,0 +1,11 @@
+Model Information:
+* title:	Silbury Hill
+* source:	https://sketchfab.com/3d-models/silbury-hill-57e7cba77a2949da83e036d0fda4305b
+* author:	Digitise3D (https://sketchfab.com/Digitise3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Silbury Hill" (https://sketchfab.com/3d-models/silbury-hill-57e7cba77a2949da83e036d0fda4305b) by Digitise3D (https://sketchfab.com/Digitise3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

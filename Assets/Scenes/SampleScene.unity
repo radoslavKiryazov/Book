@@ -1855,6 +1855,7 @@ MonoBehaviour:
   - {fileID: 1391179109632257309, guid: 287738d0f7c1045678f9a7ff507f517e, type: 3}
   - {fileID: 4082153290567216880, guid: 611766a0d1840442fb9209bde44f38de, type: 3}
   - {fileID: 2373890885784694135, guid: 2870a6b2045864aeb9e2a41854fcf4aa, type: 3}
+  - {fileID: 8140615282903054622, guid: 1de1252804f8ba94c848a1377f3592cf, type: 3}
   prefabOffset: {x: 0, y: 0.05, z: 0}
 --- !u!114 &642176355
 MonoBehaviour:

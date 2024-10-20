@@ -1,0 +1,11 @@
+Model Information:
+* title:	Plate with eggs
+* source:	https://sketchfab.com/3d-models/plate-with-eggs-232d2df6abfa4e2c88931d8f03baaafa
+* author:	patrakeevasveta (https://sketchfab.com/patrakeevasveta)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Plate with eggs" (https://sketchfab.com/3d-models/plate-with-eggs-232d2df6abfa4e2c88931d8f03baaafa) by patrakeevasveta (https://sketchfab.com/patrakeevasveta) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
