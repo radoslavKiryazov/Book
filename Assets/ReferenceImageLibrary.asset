@@ -23,12 +23,12 @@ MonoBehaviour:
       m_GuidLow: 4677982337349892785
       m_GuidHigh: 9995104003501082510
     m_SerializedTextureGuid:
-      m_GuidLow: 4915906760665496827
-      m_GuidHigh: 2449168636483802680
-    m_Size: {x: 0.5, y: 0.6666667}
+      m_GuidLow: 1464579171725721191
+      m_GuidHigh: 39610919065473579
+    m_Size: {x: 0.5, y: 0.5751073}
     m_SpecifySize: 1
     m_Name: owl
-    m_Texture: {fileID: 2800000, guid: 3a687cfbcf2744383816a50ce631fd21, type: 3}
+    m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4802400185764184622
       m_GuidHigh: 5567097499388806319
@@ -43,32 +43,32 @@ MonoBehaviour:
       m_GuidLow: 5222774910860216723
       m_GuidHigh: 17139126652380224158
     m_SerializedTextureGuid:
-      m_GuidLow: 9577847298555465732
-      m_GuidHigh: 3333966291305254552
-    m_Size: {x: 0.5, y: 0.6664402}
+      m_GuidLow: 11877670229090416288
+      m_GuidHigh: 16306652829465410523
+    m_Size: {x: 0.5, y: 0.73844284}
     m_SpecifySize: 1
     m_Name: quill
-    m_Texture: {fileID: 2800000, guid: 57555004595f84eb984e6086ada0442e, type: 3}
+    m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5545413128730328933
       m_GuidHigh: 8450958476290683327
     m_SerializedTextureGuid:
-      m_GuidLow: 16473595872760473460
-      m_GuidHigh: 11451199818517519466
-    m_Size: {x: 0.5, y: 0.33416668}
+      m_GuidLow: 14123472261793253477
+      m_GuidHigh: 9749465213044427033
+    m_Size: {x: 0.5, y: 0.7354369}
     m_SpecifySize: 1
     m_Name: star
-    m_Texture: {fileID: 2800000, guid: 593aa774f82ae49d6a1cc15a90d5ea9e, type: 3}
+    m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4773868752415243698
       m_GuidHigh: 13930305988575693239
     m_SerializedTextureGuid:
-      m_GuidLow: 7222588359346658748
-      m_GuidHigh: 12631870714204067482
-    m_Size: {x: 0.5, y: 0.33272728}
+      m_GuidLow: 17639459853445674754
+      m_GuidHigh: 15317446662819358265
+    m_Size: {x: 0.5, y: 0.73965937}
     m_SpecifySize: 1
     m_Name: tree
-    m_Texture: {fileID: 2800000, guid: 8dba9dbcc9d8643b9a16cbf07c6b4daf, type: 3}
+    m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4796419537546947589
       m_GuidHigh: 6904065334436132244
@@ -139,3 +139,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: cloud
     m_Texture: {fileID: 2800000, guid: e5d3cf2b94ac8bc44a520a235ab5efc8, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5285250312860711950
+      m_GuidHigh: 1830881538571805111
+    m_SerializedTextureGuid:
+      m_GuidLow: 15306961405096976736
+      m_GuidHigh: 6174686769315644297
+    m_Size: {x: 0.5, y: 0.73844284}
+    m_SpecifySize: 1
+    m_Name: raincloud
+    m_Texture: {fileID: 2800000, guid: 556b6160404cd46d89035ddce6e4b055, type: 3}
