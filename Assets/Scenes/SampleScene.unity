@@ -1131,7 +1131,7 @@ PrefabInstance:
     - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
       propertyPath: placeablePrefabs.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
@@ -1210,6 +1210,12 @@ PrefabInstance:
       propertyPath: 'placeablePrefabs.Array.data[12]'
       value: 
       objectReference: {fileID: 5544005478603634366, guid: b92d61e2934d667408b55b063a998325,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[13]'
+      value: 
+      objectReference: {fileID: 1904629695389159743, guid: 9084f04b93563294c9b78ca867d3a058,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3459,74 +3465,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025816440}
   m_CullTransparentMesh: 1
---- !u!1001 &1038057565
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100142454927438166, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5544005478603634366, guid: b92d61e2934d667408b55b063a998325,
-        type: 3}
-      propertyPath: m_Name
-      value: Volcano
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b92d61e2934d667408b55b063a998325, type: 3}
 --- !u!1 &1059051467
 GameObject:
   m_ObjectHideFlags: 0
@@ -7734,4 +7672,3 @@ SceneRoots:
   - {fileID: 2099970469}
   - {fileID: 331264285}
   - {fileID: 1342459498}
-  - {fileID: 1038057565}
