@@ -1131,7 +1131,7 @@ PrefabInstance:
     - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
       propertyPath: placeablePrefabs.Array.size
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
@@ -1216,6 +1216,18 @@ PrefabInstance:
       propertyPath: 'placeablePrefabs.Array.data[13]'
       value: 
       objectReference: {fileID: 1904629695389159743, guid: 9084f04b93563294c9b78ca867d3a058,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[14]'
+      value: 
+      objectReference: {fileID: 6777519431443557329, guid: efea7b491256db640838e63f480a629b,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[15]'
+      value: 
+      objectReference: {fileID: 3120837154192507237, guid: 2b5655dfc9433594f96887c40d92f02d,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
