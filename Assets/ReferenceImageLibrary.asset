@@ -138,6 +138,75 @@ MonoBehaviour:
     m_Name: cloud
     m_Texture: {fileID: 2800000, guid: e5d3cf2b94ac8bc44a520a235ab5efc8, type: 3}
   - m_SerializedGuid:
+      m_GuidLow: 5200375655618368625
+      m_GuidHigh: 9056700036308888232
+    m_SerializedTextureGuid:
+      m_GuidLow: 3167237279726642176
+      m_GuidHigh: 8024330141090015976
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: ant
+    m_Texture: {fileID: 2800000, guid: 717b240049862bf4e86a21a4bf255c6f, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4777595650592456520
+      m_GuidHigh: 17514159408179123892
+    m_SerializedTextureGuid:
+      m_GuidLow: 2356655720124628884
+      m_GuidHigh: 13321261577996436024
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: ice
+    m_Texture: {fileID: 2800000, guid: 2febbf9485e420b43882897cd3a0deb8, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4790532809806897196
+      m_GuidHigh: 11609461889654752944
+    m_SerializedTextureGuid:
+      m_GuidLow: 379567284279384211
+      m_GuidHigh: 2394866197812084411
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: jungle
+    m_Texture: {fileID: 2800000, guid: 1bd518937e6f0544bbfe2d4d1e463c21, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4740186486261473225
+      m_GuidHigh: 14441504477064017335
+    m_SerializedTextureGuid:
+      m_GuidLow: 3847268652141853844
+      m_GuidHigh: 16651614117335564953
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: kind
+    m_Texture: {fileID: 2800000, guid: 96693c943e7435649982aad0d06a16e7, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5763268926111831303
+      m_GuidHigh: 8193268709851662757
+    m_SerializedTextureGuid:
+      m_GuidLow: 7724872841279581960
+      m_GuidHigh: 4628537591180099144
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: leaf
+    m_Texture: {fileID: 2800000, guid: c7882f0842eb6b3448fed4876ade3b40, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5545420903170179467
+      m_GuidHigh: 4702438103289762474
+    m_SerializedTextureGuid:
+      m_GuidLow: 6626166099611381684
+      m_GuidHigh: 12183884352824804072
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: moon
+    m_Texture: {fileID: 2800000, guid: ee126fb4def55bf4e802901244da15a9, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5415682129331979604
+      m_GuidHigh: 6288779472379602620
+    m_SerializedTextureGuid:
+      m_GuidLow: 13912977434921141195
+      m_GuidHigh: 12035961447711900842
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: nest
+    m_Texture: {fileID: 2800000, guid: 508003cbd343c114aa042add2a5308a7, type: 3}
       m_GuidLow: 5285250312860711950
       m_GuidHigh: 1830881538571805111
     m_SerializedTextureGuid:

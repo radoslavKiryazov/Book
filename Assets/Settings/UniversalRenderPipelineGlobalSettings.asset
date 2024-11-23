@@ -90,6 +90,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+
     - rid: 2676408376591908956
       type: {class: Renderer2DResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
