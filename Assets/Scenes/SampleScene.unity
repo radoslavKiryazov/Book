@@ -1267,7 +1267,7 @@ PrefabInstance:
     - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
       propertyPath: placeablePrefabs.Array.size
-      value: 11
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
@@ -1334,6 +1334,48 @@ PrefabInstance:
       propertyPath: 'placeablePrefabs.Array.data[10]'
       value: 
       objectReference: {fileID: 3898098303541022053, guid: ed821b99d858d694b9c96a678c613cc6,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[9]'
+      value: 
+      objectReference: {fileID: 3544827888016703602, guid: fe75b16eb89cdc547b81f9f91d5e6722,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[10]'
+      value: 
+      objectReference: {fileID: 62896311710331388, guid: 6a032df9781232c41b1ec040fb039f0c,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[11]'
+      value: 
+      objectReference: {fileID: 2359830455533146323, guid: 2418a2ffb3f29d241806ff89c95e058c,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[12]'
+      value: 
+      objectReference: {fileID: 4189885193120067451, guid: 1e92fbaab6d77f94d967c7b1af45a8d5,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[13]'
+      value: 
+      objectReference: {fileID: 2810722591127346234, guid: 927ed924f9d66534aae464a5d59f4990,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[14]'
+      value: 
+      objectReference: {fileID: 4407243584894358138, guid: 73ea85ef8449bbb489b5b036b5b43158,
+        type: 3}
+    - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[15]'
+      value: 
+      objectReference: {fileID: 3317790457793408104, guid: 0505b697ddabd71428e1b1f7bd295f66,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
