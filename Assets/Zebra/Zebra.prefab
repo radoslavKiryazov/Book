@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8507609979070809432}
   m_Layer: 0
-  m_Name: Zebra
+  m_Name: zebra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

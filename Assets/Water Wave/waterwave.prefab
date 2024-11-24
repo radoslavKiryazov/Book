@@ -285,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4006908259856020573}
   m_Layer: 0
-  m_Name: Water Wave
+  m_Name: waterwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
