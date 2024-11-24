@@ -28,16 +28,6 @@ MonoBehaviour:
     m_Name: owl
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 4802400185764184622
-      m_GuidHigh: 5567097499388806319
-    m_SerializedTextureGuid:
-      m_GuidLow: 13097751658233207703
-      m_GuidHigh: 4894327675055255595
-    m_Size: {x: 0.5, y: 0.35}
-    m_SpecifySize: 1
-    m_Name: parrot
-    m_Texture: {fileID: 2800000, guid: 01461b978fbdb5c42b3008d61625ec43, type: 3}
-  - m_SerializedGuid:
       m_GuidLow: 5222774910860216723
       m_GuidHigh: 17139126652380224158
     m_SerializedTextureGuid:
@@ -215,7 +205,7 @@ MonoBehaviour:
       m_GuidHigh: 9741387787106981161
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: underwater
+    m_Name: Underwater
     m_Texture: {fileID: 2800000, guid: 1cdbf8d67067ce742915d78d945c3087, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5756738079858096960
@@ -235,7 +225,7 @@ MonoBehaviour:
       m_GuidHigh: 9442976732118784457
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Water Wave
+    m_Name: waterwave
     m_Texture: {fileID: 2800000, guid: d6850cd02b654274c919388c4e310c83, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5145201990344562990
@@ -265,5 +255,25 @@ MonoBehaviour:
       m_GuidHigh: 12216692389545016362
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Yak
+    m_Name: yak
     m_Texture: {fileID: 2800000, guid: ac31f12e8d4d8bd42a7c0c6100698aa9, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5668446176489749492
+      m_GuidHigh: 1988274279297554060
+    m_SerializedTextureGuid:
+      m_GuidLow: 2627851114691993039
+      m_GuidHigh: 7376180329464897371
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: parrot
+    m_Texture: {fileID: 2800000, guid: 75d49dcf00aa24785b9ffad0ed745d66, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5500725534233568992
+      m_GuidHigh: 1972428459863221435
+    m_SerializedTextureGuid:
+      m_GuidLow: 937887498613408228
+      m_GuidHigh: 14796012319789666793
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: bee
+    m_Texture: {fileID: 2800000, guid: fa21c1e40bb50d04e9d15dedcffe55cd, type: 3}

@@ -1285,7 +1285,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'placeablePrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 987373823868656408, guid: e379c24e2938843499076d3b8c70a0e4,
+      objectReference: {fileID: 81441895710583081, guid: b646eab11c046d84ea6e50fa1edd7e27,
         type: 3}
     - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
@@ -1411,7 +1411,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'placeablePrefabs.Array.data[23]'
       value: 
-      objectReference: {fileID: 3120837154192507237, guid: 2b5655dfc9433594f96887c40d92f02d,
+      objectReference: {fileID: 1550308933327599831, guid: 4347c167f6319ca4abf22aaae3e6992a,
         type: 3}
     - target: {fileID: 7235791647824437805, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
