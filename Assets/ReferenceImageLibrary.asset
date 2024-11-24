@@ -207,15 +207,6 @@ MonoBehaviour:
     m_SpecifySize: 0
     m_Name: nest
     m_Texture: {fileID: 2800000, guid: 508003cbd343c114aa042add2a5308a7, type: 3}
-      m_GuidLow: 5285250312860711950
-      m_GuidHigh: 1830881538571805111
-    m_SerializedTextureGuid:
-      m_GuidLow: 15306961405096976736
-      m_GuidHigh: 6174686769315644297
-    m_Size: {x: 0.5, y: 0.73844284}
-    m_SpecifySize: 1
-    m_Name: raincloud
-    m_Texture: {fileID: 2800000, guid: 556b6160404cd46d89035ddce6e4b055, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5010499042568072963
       m_GuidHigh: 6983663206332671145
@@ -266,3 +257,13 @@ MonoBehaviour:
     m_SpecifySize: 0
     m_Name: Zebra
     m_Texture: {fileID: 2800000, guid: 4840898271fc5874ca443739021dc7f8, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5668128731091434286
+      m_GuidHigh: 3951764310521115557
+    m_SerializedTextureGuid:
+      m_GuidLow: 10075833631075594542
+      m_GuidHigh: 12216692389545016362
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Yak
+    m_Texture: {fileID: 2800000, guid: ac31f12e8d4d8bd42a7c0c6100698aa9, type: 3}
