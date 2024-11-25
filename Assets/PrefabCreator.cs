@@ -29,74 +29,66 @@ public class PrefabCreator : MonoBehaviour
     [Obsolete]
     private void OnEnable()
     {
-        aRTrackedImageManager.trackedImagesChanged += onChanged;
+        aRTrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
     }
 
     [Obsolete]
     private void OnDisable()
     {
-        aRTrackedImageManager.trackedImagesChanged -= onChanged;
+        aRTrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
     [Obsolete]
-    private void onChanged(ARTrackedImagesChangedEventArgs args)
+    private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs args)
     {
-        foreach (ARTrackedImage newImage in args.added)
+        foreach (ARTrackedImage trackedImage in args.added)
         {
-            UpdateImage(newImage);
+            UpdateImage(trackedImage);
         }
 
-        foreach (ARTrackedImage updatedImage in args.updated)
+        foreach (ARTrackedImage trackedImage in args.updated)
         {
-            UpdateImage(updatedImage);
+            UpdateImage(trackedImage);
         }
 
-        foreach (var removedImage in args.removed)
+        foreach (ARTrackedImage trackedImage in args.removed)
         {
-            spawnedPrefabs[removedImage.referenceImage.name].SetActive(false);
+            if (spawnedPrefabs.TryGetValue(trackedImage.referenceImage.name, out GameObject prefab))
+            {
+                prefab.SetActive(false);
+            }
         }
     }
 
-    private void UpdateImage(ARTrackedImage newImage)
+    private void UpdateImage(ARTrackedImage trackedImage)
     {
-        string name = newImage.referenceImage.name;
-        Vector3 position = newImage.transform.position;
+        string imageName = trackedImage.referenceImage.name;
 
-        if (spawnedPrefabs.TryGetValue(name, out GameObject prefab))
+        if (spawnedPrefabs.TryGetValue(imageName, out GameObject prefab))
         {
-            // Only apply this logic to the bee prefab
-            if (prefab.name == "bee")
+            if (trackedImage.trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Tracking)
             {
-                // Only set the position if the bee is not yet active
+                prefab.transform.position = trackedImage.transform.position + prefabOffset;
+
                 if (!prefab.activeInHierarchy)
                 {
-                    prefab.transform.position = position; // Set initial position
-                    prefab.SetActive(true); // Activate the bee
-                    activePrefab = prefab; // Store reference to active prefab
-                }
+                    prefab.SetActive(true);
 
-                // Ensure the bee is controlled by Rigidbody and isn't affected by AR tracking anymore
-                Rigidbody beeRigidbody = prefab.GetComponent<Rigidbody>();
-                if (beeRigidbody != null)
-                {
-                    beeRigidbody.isKinematic = false; // Allow physics to control the bee
+                    // Special case for "bee" prefab
+                    if (imageName == "bee")
+                    {
+                        Rigidbody beeRigidbody = prefab.GetComponent<Rigidbody>();
+                        if (beeRigidbody != null)
+                        {
+                            beeRigidbody.isKinematic = false; // Enable physics
+                        }
+                    }
                 }
             }
             else
             {
-                // For all other prefabs, continue to update position as normal
-                prefab.transform.position = position;
-                prefab.SetActive(true);
-                activePrefab = prefab;
-            }
-
-            // Deactivate all other prefabs except the current one
-            foreach (GameObject go in spawnedPrefabs.Values)
-            {
-                if (go != prefab)
-                {
-                    go.SetActive(false);
-                }
+                // If the image is not tracked, deactivate the prefab
+                prefab.SetActive(false);
             }
         }
     }
