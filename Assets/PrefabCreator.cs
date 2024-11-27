@@ -1,38 +1,95 @@
 using System;
-using System.Diagnostics.Tracing;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
+[RequireComponent(typeof(ARTrackedImageManager))]
 public class PrefabCreator : MonoBehaviour
 {
-    [SerializeField] private GameObject beePrefab;
+    [SerializeField] private GameObject[] placeablePrefabs;
+    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
     [SerializeField] private Vector3 prefabOffset;
 
     private ARTrackedImageManager aRTrackedImageManager;
-    private GameObject bee;
+    private GameObject activePrefab;
 
-    private void OnEnable()
+    private void Awake()
     {
         aRTrackedImageManager = GetComponent<ARTrackedImageManager>();
-        aRTrackedImageManager.trackablesChanged.AddListener(onChanged);
+
+        foreach (GameObject prefab in placeablePrefabs)
+        {
+            GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+            newPrefab.name = prefab.name;
+            newPrefab.SetActive(false);
+            spawnedPrefabs.Add(prefab.name, newPrefab);
+        }
     }
 
-    private void onChanged(ARTrackablesChangedEventArgs<ARTrackedImage> args)
+    [Obsolete]
+    private void OnEnable()
     {
-        foreach (var newImage in args.added)
+        aRTrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+    }
+
+    [Obsolete]
+    private void OnDisable()
+    {
+        aRTrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
+    }
+
+    [Obsolete]
+    private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs args)
+    {
+        foreach (ARTrackedImage trackedImage in args.added)
         {
-            bee = Instantiate(beePrefab, newImage.transform);
-            bee.transform.position += prefabOffset;
+            UpdateImage(trackedImage);
         }
 
-        foreach (var updatedImage in args.updated)
+        foreach (ARTrackedImage trackedImage in args.updated)
         {
-            // Handle updated event
+            UpdateImage(trackedImage);
         }
 
-        foreach (var removedImage in args.removed)
+        foreach (ARTrackedImage trackedImage in args.removed)
         {
-            // Handle removed event
+            if (spawnedPrefabs.TryGetValue(trackedImage.referenceImage.name, out GameObject prefab))
+            {
+                prefab.SetActive(false);
+            }
+        }
+    }
+
+    private void UpdateImage(ARTrackedImage trackedImage)
+    {
+        string imageName = trackedImage.referenceImage.name;
+
+        if (spawnedPrefabs.TryGetValue(imageName, out GameObject prefab))
+        {
+            if (trackedImage.trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Tracking)
+            {
+                prefab.transform.position = trackedImage.transform.position + prefabOffset;
+
+                if (!prefab.activeInHierarchy)
+                {
+                    prefab.SetActive(true);
+
+                    // Special case for "bee" prefab
+                    if (imageName == "bee")
+                    {
+                        Rigidbody beeRigidbody = prefab.GetComponent<Rigidbody>();
+                        if (beeRigidbody != null)
+                        {
+                            beeRigidbody.isKinematic = false; // Enable physics
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // If the image is not tracked, deactivate the prefab
+                prefab.SetActive(false);
+            }
         }
     }
 }
